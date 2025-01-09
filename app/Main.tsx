@@ -1,8 +1,9 @@
 import React from 'react';
 import About from './About';
 import Works from './Works';
+import Footer from './Footer';
 
-const Main: React.FC = () => {
+const Main = () => {
   return (
     <main>
       <div className="relative min-h-[90vh] flex items-center justify-center bg-gray-50">
@@ -13,6 +14,7 @@ const Main: React.FC = () => {
       </div>
       <About />
       <Works />
+      <Footer />
     </main>
   );
 };
