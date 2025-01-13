@@ -24,6 +24,19 @@ const About = () => {
             </svg>
             GitHub
           </a>
+          <a
+            href="https://qiita.com/ks415"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-green-600 hover:text-green-800 transition-colors text-sm ml-4"
+          >
+            <img
+              src="/qiita-icon.png"
+              alt="Qiita Icon"
+              className="w-4 h-4 mr-1"
+            />
+            Qiita
+          </a>
         </div>
 
         <div className="text-center mb-8">

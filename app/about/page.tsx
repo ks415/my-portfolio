@@ -10,17 +10,16 @@ const AboutPage = () => {
           <h1 className="text-4xl font-bold text-center text-black mb-8">About</h1>
           <h2 className="text-2xl font-bold text-center text-black mb-4">川越　壮 / So Kawagoe</h2>
           
-          {/* GitHubリンク */}
+          {/* SNSリンク */}
           <div className="flex justify-center mb-12">
             <a
               href="https://github.com/ks415"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 bg-gray-800 hover:bg-gray-700 
-                       text-white rounded-lg transition-colors duration-200"
+              className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors text-sm"
             >
               <svg
-                className="w-5 h-5 mr-2"
+                className="w-4 h-4 mr-1"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -28,8 +27,21 @@ const AboutPage = () => {
               </svg>
               GitHub
             </a>
+            <a
+              href="https://qiita.com/ks415"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-green-600 hover:text-green-800 transition-colors text-sm ml-4"
+            >
+              <img
+                src="/qiita-icon.png"
+                alt="Qiita Icon"
+                className="w-4 h-4 mr-1"
+              />
+              Qiita
+            </a>
           </div>
-          
+
           {/* プロフィール */}
           <div className="mb-12">
             <h3 className="text-xl font-bold mb-4">Profile</h3>
