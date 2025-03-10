@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+// import Link from "next/link";  # Linkを使う場合は追加
 
 const Works = () => {
   return (
