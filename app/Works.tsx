@@ -48,7 +48,7 @@ const Works = () => {
             <div className="cursor-pointer">
               <div className="w-full h-60 mb-4">
                 <img
-                  src="/prepating.png"
+                  src="/preparing.png"
                   alt="Project 3"
                   className="w-full h-full object-cover rounded hover:opacity-80 transition-opacity"
                 />
