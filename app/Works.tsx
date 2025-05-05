@@ -1,5 +1,5 @@
 import React from "react";
-// import Link from "next/link";  # Linkを使う場合は追加
+import Link from "next/link"; // Linkを使う場合は追加
 
 const Works = () => {
   return (
@@ -27,24 +27,28 @@ const Works = () => {
             <p className="text-gray-700">ReactとExpressとPostgreSQLを使用</p>
           </div>
           <div className="bg-gray-200 p-6 rounded-lg shadow-md">
-            {/* <Link href="https://blog-with-react-and-firebase-six.vercel.app/" target="_blank" rel="noopener noreferrer"> */}
-            <div className="cursor-pointer">
-              <div className="w-full h-60 mb-4">
-                <img
-                  src="/preparing.png"
-                  alt="Project 2"
-                  className="w-full h-full object-cover rounded hover:opacity-80 transition-opacity"
-                />
+            <Link
+              href="https://fashion-checker-frontend.onrender.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="cursor-pointer">
+                <div className="w-full h-60 mb-4">
+                  <img
+                    src="/fashion-checker.png"
+                    alt="Project 2"
+                    className="w-full h-full object-cover rounded hover:opacity-80 transition-opacity"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold mb-2 hover:text-gray-600 transition-colors">
+                  fashion-checker(仮)
+                </h3>
               </div>
-              <h3 className="text-2xl font-bold mb-2 hover:text-gray-600 transition-colors">
-                準備中
-              </h3>
-            </div>
-            {/* </Link> */}
-            <p className="text-gray-700">準備中</p>
+            </Link>
+            <p className="text-gray-700">FastAPIとFletを使用</p>
           </div>
           <div className="bg-gray-200 p-6 rounded-lg shadow-md">
-            {/* <Link href="https://blog-with-react-and-firebase-six.vercel.app/" target="_blank" rel="noopener noreferrer"> */}
+            {/* <Link href="https://fashion-checker-frontend.onrender.com/" target="_blank" rel="noopener noreferrer"> */}
             <div className="cursor-pointer">
               <div className="w-full h-60 mb-4">
                 <img
