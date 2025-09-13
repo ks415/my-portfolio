@@ -10,7 +10,7 @@ const ExperienceSection = () => {
       role: "AI Engineer",
       period: "Feb 2025 - Present",
       logo: "AthenaTechnologies.png",
-      logoColor: "#4285F4",
+      logoColor: "#ffffffff",
       description:
         "AI Engineerとして、機械学習とディープラーニング技術を活用したソリューションの開発に従事しています。",
       active: true,
