@@ -18,50 +18,94 @@ const SkillsSection = () => {
 
   return (
     <section id="skills" className="bg-white min-h-screen scroll-mt-24">
-      <div className="max-w-[1440px] mx-auto px-20 py-15 flex flex-col justify-center items-center h-full min-h-screen">
-        <div className="flex flex-col gap-5 px-8 max-w-[1280px]">
-          <div className="flex justify-center items-center self-stretch gap-4 py-5 mb-0">
-            <span className="text-5xl font-normal leading-[1.167] tracking-tight">
+      <div className="px-4 md:px-20 py-10 md:py-15 flex flex-col justify-center items-center h-full min-h-screen">
+        <div className="flex flex-col gap-5 px-4 md:px-8 max-w-[1280px] w-full">
+          {/* Section Title */}
+          <div className="flex justify-center items-center self-stretch gap-2 md:gap-4 py-5 mb-0">
+            <span className="text-3xl md:text-5xl font-normal leading-[1.167] tracking-tight">
               My
             </span>
-            <span className="text-5xl font-extrabold leading-[1.167] tracking-tight">
+            <span className="text-3xl md:text-5xl font-extrabold leading-[1.167] tracking-tight">
               Skills
             </span>
           </div>
+
+          {/* Skills Grid */}
           <div className="flex flex-col items-center self-stretch py-5">
-            <div className="flex justify-between items-center self-stretch py-5">
-              {skills.slice(0, 5).map((skill, index) => (
+            {/* Mobile: Single column grid */}
+            <div className="grid grid-cols-2 md:hidden gap-4 w-full max-w-md">
+              {skills.map((skill, index) => (
                 <div
                   key={index}
-                  className={`flex flex-col items-center justify-center gap-8 p-6 border-2 border-black rounded w-[186px] h-[186px] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+                  className={`flex flex-col items-center justify-center gap-4 p-4 border-2 border-black rounded w-full h-32 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
                     skill.active ? "bg-black text-white" : "bg-white"
                   }`}
                 >
-                  <div className="w-14 h-14 flex items-center justify-center text-3xl">
+                  <div className="w-8 h-8 flex items-center justify-center text-xl">
                     <i className={skill.icon}></i>
                   </div>
-                  <div className="text-xl font-bold text-center leading-tight tracking-tight">
+                  <div className="text-sm font-bold text-center leading-tight tracking-tight">
                     {skill.name}
                   </div>
                 </div>
               ))}
             </div>
-            <div className="flex justify-between items-center self-stretch py-5">
-              {skills.slice(5, 10).map((skill, index) => (
+
+            {/* Tablet: 3 columns grid */}
+            <div className="hidden md:grid lg:hidden grid-cols-3 gap-5 w-full">
+              {skills.map((skill, index) => (
                 <div
-                  key={index + 5}
-                  className={`flex flex-col items-center justify-center gap-8 p-6 border-2 border-black rounded w-[186px] h-[186px] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+                  key={index}
+                  className={`flex flex-col items-center justify-center gap-6 p-5 border-2 border-black rounded w-full h-40 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
                     skill.active ? "bg-black text-white" : "bg-white"
                   }`}
                 >
-                  <div className="w-14 h-14 flex items-center justify-center text-3xl">
+                  <div className="w-10 h-10 flex items-center justify-center text-2xl">
                     <i className={skill.icon}></i>
                   </div>
-                  <div className="text-xl font-bold text-center leading-tight tracking-tight">
+                  <div className="text-lg font-bold text-center leading-tight tracking-tight">
                     {skill.name}
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Desktop: Original 2-row layout */}
+            <div className="hidden lg:flex flex-col gap-5 w-full">
+              <div className="flex justify-between items-center self-stretch">
+                {skills.slice(0, 5).map((skill, index) => (
+                  <div
+                    key={index}
+                    className={`flex flex-col items-center justify-center gap-8 p-6 border-2 border-black rounded w-[186px] h-[186px] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+                      skill.active ? "bg-black text-white" : "bg-white"
+                    }`}
+                  >
+                    <div className="w-14 h-14 flex items-center justify-center text-3xl">
+                      <i className={skill.icon}></i>
+                    </div>
+                    <div className="text-xl font-bold text-center leading-tight tracking-tight">
+                      {skill.name}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="flex justify-between items-center self-stretch">
+                {skills.slice(5, 10).map((skill, index) => (
+                  <div
+                    key={index + 5}
+                    className={`flex flex-col items-center justify-center gap-8 p-6 border-2 border-black rounded w-[186px] h-[186px] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+                      skill.active ? "bg-black text-white" : "bg-white"
+                    }`}
+                  >
+                    <div className="w-14 h-14 flex items-center justify-center text-3xl">
+                      <i className={skill.icon}></i>
+                    </div>
+                    <div className="text-xl font-bold text-center leading-tight tracking-tight">
+                      {skill.name}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

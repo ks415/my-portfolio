@@ -51,28 +51,32 @@ const ExperienceSection = () => {
 
   return (
     <section className="bg-black text-white min-h-screen">
-      <div className="max-w-[1440px] mx-auto px-20 py-15 h-full min-h-screen">
-        <div className="flex flex-col justify-center items-center gap-5 px-8 max-w-[1280px] mx-auto h-full">
-          <div className="flex justify-center items-center self-stretch gap-4 py-5 mb-0">
-            <span className="text-5xl font-normal leading-[1.167] tracking-tight text-white">
+      <div className="px-4 md:px-20 py-10 md:py-15 h-full min-h-screen">
+        <div className="flex flex-col justify-center items-center gap-5 px-4 md:px-8 max-w-[1280px] mx-auto h-full">
+          {/* Section Title */}
+          <div className="flex justify-center items-center self-stretch gap-2 md:gap-4 py-5 mb-0">
+            <span className="text-3xl md:text-5xl font-normal leading-[1.167] tracking-tight text-white">
               My
             </span>
-            <span className="text-5xl font-extrabold leading-[1.167] tracking-tight text-white">
+            <span className="text-3xl md:text-5xl font-extrabold leading-[1.167] tracking-tight text-white">
               Experience
             </span>
           </div>
-          <div className="flex flex-col self-stretch gap-8 py-10 px-6">
+
+          {/* Experience Cards */}
+          <div className="flex flex-col self-stretch gap-6 md:gap-8 py-8 md:py-10 px-0 md:px-6">
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className={`p-8 px-6 rounded-xl border border-[#71717A] self-stretch gap-7 flex flex-col transition-all duration-300 ${
+                className={`p-4 md:p-8 px-4 md:px-6 rounded-xl border border-[#71717A] self-stretch gap-4 md:gap-7 flex flex-col transition-all duration-300 ${
                   exp.active ? "bg-[#27272A]" : "bg-black"
                 }`}
               >
-                <div className="flex justify-between items-center self-stretch gap-47">
-                  <div className="flex items-center self-stretch gap-8 w-[1018px]">
+                {/* Header */}
+                <div className="flex flex-col md:flex-row md:justify-between md:items-center self-stretch gap-3 md:gap-47">
+                  <div className="flex items-center self-stretch gap-4 md:gap-8 flex-1">
                     <div
-                      className="w-8 h-8 rounded flex items-center justify-center text-white"
+                      className="w-6 h-6 md:w-8 md:h-8 rounded flex items-center justify-center text-white flex-shrink-0"
                       style={{ backgroundColor: exp.logoColor }}
                     >
                       {exp.hasCustomLogo ? (
@@ -81,25 +85,29 @@ const ExperienceSection = () => {
                           alt={`${exp.company} logo`}
                           width={24}
                           height={24}
-                          className="object-contain"
+                          className="object-contain w-4 h-4 md:w-6 md:h-6"
                         />
                       ) : (
-                        <i className={exp.logo}></i>
+                        <i className={`${exp.logo} text-sm md:text-base`}></i>
                       )}
                     </div>
-                    <div className="text-2xl font-semibold text-white leading-[1.167] tracking-tight text-center">
+                    <div className="text-lg md:text-2xl font-semibold text-white leading-[1.167] tracking-tight">
                       {exp.isSchool
                         ? exp.company
                         : `${exp.role} at ${exp.company}`}
                     </div>
                   </div>
-                  <div className="text-base font-semibold text-[#D4D4D8] leading-5 tracking-tight text-right">
+                  <div className="text-sm md:text-base font-semibold text-[#D4D4D8] leading-5 tracking-tight md:text-right">
                     {exp.period}
                   </div>
                 </div>
-                <div className="text-base leading-6 text-[#D4D4D8] tracking-wider">
-                  {exp.description}
-                </div>
+
+                {/* Description */}
+                {exp.description && (
+                  <div className="text-sm md:text-base leading-6 text-[#D4D4D8] tracking-wider">
+                    {exp.description}
+                  </div>
+                )}
               </div>
             ))}
           </div>
