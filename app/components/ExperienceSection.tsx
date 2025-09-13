@@ -24,7 +24,7 @@ const ExperienceSection = () => {
       logoColor: "#283544",
       description:
         "知能メディア処理研究室に所属し、Vision-Language Modelの研究に従事。マルチモーダル学習やFew-shot学習などの技術を研究しています。",
-      active: false,
+      active: true,
       isSchool: true,
     },
     {
