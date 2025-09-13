@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio - Evren Shah</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Sora", sans-serif;
+        line-height: 1.6;
+        color: #000;
+        background: #fff;
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 32px;
+      }
+
+      /* Header Styles */
+      .header {
+        background: #fff;
+        padding: 24px 80px;
+        width: 1440px;
+        margin: 0 auto;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 32px;
+        width: 1280px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 20px;
+        font-weight: 700;
+        color: #000;
+        text-decoration: none;
+      }
+
+      .logo-icon {
+        width: 39.91px;
+        height: 40px;
+        background: #000;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+      }
+
+      .nav {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nav-link {
+        font-size: 20px;
+        font-weight: 600;
+        color: #000;
+        text-decoration: none;
+        transition: color 0.3s;
+        text-transform: uppercase;
+        letter-spacing: -2%;
+      }
+
+      .nav-link:hover {
+        color: #666;
+      }
+
+      /* Hero Section */
+      .hero {
+        padding: 60px 80px;
+        position: relative;
+        overflow: hidden;
+        width: 1440px;
+        margin: 0 auto;
+      }
+
+      .hero-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 32px;
+        width: 1280px;
+        margin: 0 auto;
+      }
+
+      .hero-content {
+        flex: 1;
+        max-width: 600px;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+      }
+
+      .hero-social {
+        position: absolute;
+        top: 620px;
+        left: 112px;
+        display: flex;
+        gap: 32px;
+        padding: 4px 0;
+      }
+
+      .social-btn {
+        width: 56px;
+        height: 56px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        transition: transform 0.3s;
+        padding: 16px;
+      }
+
+      .social-btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .social-btn.facebook {
+        background: #000;
+      }
+
+      .social-btn.reddit,
+      .social-btn.twitter,
+      .social-btn.discord {
+        background: #fff;
+        border: 2px solid #000;
+        color: #000;
+      }
+
+      .hero-text {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-self: stretch;
+      }
+
+      .hero-line {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .display-text {
+        font-size: 48px;
+        line-height: 1.1666666666666667;
+        letter-spacing: -2%;
+      }
+
+      .display-regular {
+        font-weight: 400;
+      }
+
+      .display-bold {
+        font-weight: 800;
+      }
+
+      .display-outlined {
+        font-weight: 800;
+        -webkit-text-stroke: 3px #000;
+        color: transparent;
+      }
+
+      .hero-description {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #71717a;
+        letter-spacing: 2%;
+        align-self: stretch;
+      }
+
+      .hero-image {
+        flex-shrink: 0;
+        max-width: 889px;
+        justify-content: center;
+        align-items: flex-end;
+      }
+
+      .hero-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      /* Skills Section */
+      .skills {
+        padding: 60px 80px;
+        background: #fff;
+        width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .skills-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 32px;
+        width: 1280px;
+      }
+
+      .section-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+        gap: 16px;
+        padding: 20px 0;
+        margin-bottom: 0;
+      }
+
+      .section-title .display-regular {
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 1.1666666666666667;
+        letter-spacing: -2%;
+      }
+
+      .section-title .display-bold {
+        font-size: 48px;
+        font-weight: 800;
+        line-height: 1.1666666666666667;
+        letter-spacing: -2%;
+      }
+
+      .skills-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: stretch;
+        padding: 20px 0;
+      }
+
+      .skills-grid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+        padding: 20px 0;
+      }
+
+      .skills-grid-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+        padding: 20px 0;
+      }
+
+      .skill-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        padding: 24px;
+        border: 2px solid #000;
+        border-radius: 4px;
+        background: #fff;
+        width: 186px;
+        height: 186px;
+        transition: all 0.3s;
+      }
+
+      .skill-card.active {
+        background: #000;
+        color: #fff;
+      }
+
+      .skill-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .skill-icon {
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+      }
+
+      .skill-name {
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 1.2;
+        letter-spacing: -2%;
+      }
+
+      /* Experience Section */
+      .experience {
+        padding: 60px 80px;
+        background: #000;
+        color: #fff;
+        width: 1440px;
+        margin: 0 auto;
+      }
+
+      .experience-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 0 32px;
+        width: 1280px;
+        margin: 0 auto;
+      }
+
+      .experience .section-title {
+        color: #fff;
+      }
+
+      .experience-grid {
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        gap: 32px;
+        padding: 40px 24px;
+      }
+
+      .experience-card {
+        padding: 30px 24px;
+        border-radius: 10px;
+        background: #000;
+        border: 1px solid #71717a;
+        align-self: stretch;
+        gap: 28px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .experience-card.active {
+        background: #27272a;
+      }
+
+      .experience-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+        gap: 188px;
+      }
+
+      .experience-company {
+        display: flex;
+        align-items: center;
+        align-self: stretch;
+        gap: 30px;
+        width: 1018px;
+      }
+
+      .company-logo {
+        width: 32px;
+        height: 32px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .company-title {
+        font-size: 24px;
+        font-weight: 600;
+        color: #fff;
+        line-height: 1.1666666666666667;
+        letter-spacing: -2%;
+        text-align: center;
+      }
+
+      .experience-period {
+        font-size: 16px;
+        font-weight: 600;
+        color: #d4d4d8;
+        line-height: 1.25;
+        letter-spacing: -2%;
+        text-align: right;
+      }
+
+      .experience-description {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #d4d4d8;
+        letter-spacing: 2%;
+      }
+
+      /* About Section */
+      .about {
+        padding: 60px 80px;
+        background: #fff;
+        width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .about-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 32px;
+        width: 1280px;
+      }
+
+      .about-image {
+        flex-shrink: 0;
+        width: 525.45px;
+        height: 572px;
+      }
+
+      .about-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .about-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 572px;
+      }
+
+      .about-title {
+        display: flex;
+        align-self: stretch;
+        gap: 16px;
+        padding: 20px 0;
+      }
+
+      .about-text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .about-text {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #71717a;
+        width: 610px;
+        letter-spacing: 2%;
+      }
+
+      /* Projects Section */
+      .projects {
+        padding: 60px 80px;
+        background: #000;
+        color: #fff;
+        width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .projects-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 32px;
+        width: 1280px;
+        margin: 0 auto;
+      }
+
+      .projects .section-title {
+        color: #fff;
+      }
+
+      .project-item {
+        display: flex;
+        align-items: center;
+        align-self: stretch;
+        gap: 40px;
+        padding: 20px 0;
+      }
+
+      .project-item:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      .project-image {
+        flex: 1;
+        max-width: 594px;
+        height: 476px;
+        display: flex;
+        align-items: center;
+      }
+
+      .project-image.right {
+        justify-content: flex-end;
+      }
+
+      .project-image img {
+        width: 530px;
+        height: 397.73px;
+        border-radius: 18.761064529418945px;
+        box-shadow: 0px 12px 42px -4px rgba(24, 39, 75, 0.12),
+          0px 8px 18px -6px rgba(24, 39, 75, 0.12);
+        object-fit: cover;
+      }
+
+      .project-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        justify-content: center;
+      }
+
+      .project-number {
+        font-size: 48px;
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.1666666666666667;
+        letter-spacing: -2%;
+      }
+
+      .project-title {
+        font-size: 32px;
+        font-weight: 700;
+        color: #fff;
+        line-height: 1.25;
+        letter-spacing: -2%;
+      }
+
+      .project-description {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #71717a;
+        letter-spacing: 2%;
+      }
+
+      .read-more-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        transition: opacity 0.3s;
+      }
+
+      .read-more-btn:hover {
+        opacity: 0.8;
+      }
+
+      /* Footer */
+      .footer {
+        background: #000;
+        color: #fff;
+        padding: 24px 80px;
+        width: 1440px;
+        margin: 0 auto;
+      }
+
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 32px;
+        width: 1280px;
+        margin: 0 auto;
+      }
+
+      .footer-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .footer-logo .logo-icon {
+        background: #fff;
+        color: #000;
+      }
+
+      .footer-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 12px;
+      }
+
+      .footer-copyright,
+      .footer-credit {
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        line-height: 1.25;
+        letter-spacing: -2%;
+      }
+
+      /* Container class for sections */
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 32px;
+      }
+
+      /* Remove container class usage and use specific containers */
+      body {
+        font-family: "Sora", sans-serif;
+        line-height: 1.6;
+        color: #000;
+        background: #fff;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1200px) {
+        .hero-container,
+        .about-container {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .project-item {
+          flex-direction: column !important;
+        }
+
+        .skills-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header,
+        .hero,
+        .skills,
+        .experience,
+        .about,
+        .projects,
+        .footer {
+          padding: 40px 20px;
+        }
+
+        .nav {
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .skills-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .display-text {
+          font-size: 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <a href="#" class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-user"></i>
+          </div>
+          Personal
+        </a>
+        <nav class="nav">
+          <a href="#about" class="nav-link">About Me</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Project</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-social">
+        <a href="#" class="social-btn facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social-btn reddit">
+          <i class="fab fa-reddit-alien"></i>
+        </a>
+        <a href="#" class="social-btn twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="social-btn discord">
+          <i class="fab fa-discord"></i>
+        </a>
+      </div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="hero-line">
+              <span class="display-text display-regular">Hello I'am</span>
+              <span class="display-text display-bold">Evren Shah.</span>
+            </div>
+            <div class="hero-line">
+              <span class="display-text display-bold">Frontend</span>
+              <span class="display-text display-outlined">Developer</span>
+            </div>
+            <div class="hero-line">
+              <span class="display-text display-regular">Based In</span>
+              <span class="display-text display-bold">India.</span>
+            </div>
+          </div>
+          <p class="hero-description">
+            I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry. Lorem Ipsum has been the industry's standard
+            dummy text ever since the 1500s, when an unknown printer took a
+            galley of type and scrambled it to specimen book.
+          </p>
+        </div>
+        <div class="hero-image">
+          <img
+            src="public/hero-character.png"
+            alt="Frontend Developer Character"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+      <div class="skills-container">
+        <div class="section-title">
+          <span class="display-regular">My</span>
+          <span class="display-bold">Skills</span>
+        </div>
+        <div class="skills-row">
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fab fa-git-alt"></i>
+              </div>
+              <div class="skill-name">Git</div>
+            </div>
+            <div class="skill-card active">
+              <div class="skill-icon">
+                <i class="fab fa-js-square"></i>
+              </div>
+              <div class="skill-name">Javascript</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fab fa-sass"></i>
+              </div>
+              <div class="skill-name">Sass/scss</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fas fa-server"></i>
+              </div>
+              <div class="skill-name">Nest.Js</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fas fa-book"></i>
+              </div>
+              <div class="skill-name">Storybook</div>
+            </div>
+          </div>
+          <div class="skills-grid-row">
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fas fa-server"></i>
+              </div>
+              <div class="skill-name">Nest.Js</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fab fa-git-alt"></i>
+              </div>
+              <div class="skill-name">Git</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fas fa-book"></i>
+              </div>
+              <div class="skill-name">Storybook</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fas fa-plug"></i>
+              </div>
+              <div class="skill-name">Socket.io</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fab fa-sass"></i>
+              </div>
+              <div class="skill-name">Sass/scss</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience">
+      <div class="experience-container">
+        <div class="section-title">
+          <span class="display-regular">My</span>
+          <span class="display-bold">Experience</span>
+        </div>
+        <div class="experience-grid">
+          <div class="experience-card">
+            <div class="experience-header">
+              <div class="experience-company">
+                <div class="company-logo" style="background: #4285f4">
+                  <i class="fab fa-google"></i>
+                </div>
+                <div class="company-title">
+                  Lead Software Engineer at Google
+                </div>
+              </div>
+              <div class="experience-period">Nov 2019 - Present</div>
+            </div>
+            <div class="experience-description">
+              As a Senior Software Engineer at Google, I played a pivotal role
+              in developing innovative solutions for Google's core search
+              algorithms. Collaborating with a dynamic team of engineers, I
+              contributed to the enhancement of search accuracy and efficiency,
+              optimizing user experiences for millions of users worldwide.
+            </div>
+          </div>
+
+          <div class="experience-card active">
+            <div class="experience-header">
+              <div class="experience-company">
+                <div class="company-logo" style="background: #fc0d1b">
+                  <i class="fab fa-youtube"></i>
+                </div>
+                <div class="company-title">Software Engineer at Youtube</div>
+              </div>
+              <div class="experience-period">Jan 2017 - Oct 2019</div>
+            </div>
+            <div class="experience-description">
+              At Youtube, I served as a Software Engineer, focusing on the
+              design and implementation of backend systems for the social media
+              giant's dynamic platform. Working on projects that involved
+              large-scale data processing and user engagement features, I
+              leveraged my expertise to ensure seamless functionality and
+              scalability.
+            </div>
+          </div>
+
+          <div class="experience-card">
+            <div class="experience-header">
+              <div class="experience-company">
+                <div class="company-logo" style="background: #283544">
+                  <i class="fab fa-apple"></i>
+                </div>
+                <div class="company-title">
+                  Junior Software Engineer at Apple
+                </div>
+              </div>
+              <div class="experience-period">Jan 2016 - Dec 2017</div>
+            </div>
+            <div class="experience-description">
+              During my tenure at Apple, I held the role of Software Architect,
+              where I played a key role in shaping the architecture of
+              mission-critical software projects. Responsible for designing
+              scalable and efficient systems, I provided technical leadership to
+              a cross-functional team.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="about-container">
+        <div class="about-image">
+          <img src="public/about-character.png" alt="About Me Character" />
+        </div>
+        <div class="about-content">
+          <div class="section-title">
+            <span class="display-regular">About</span>
+            <span class="display-bold">Me</span>
+          </div>
+          <p class="about-text">
+            I'm a passionate, self-proclaimed designer who specializes in full
+            stack development (React.js & Node.js). I am very enthusiastic about
+            bringing the technical and visual aspects of digital products to
+            life. User experience, pixel perfect design, and writing clear,
+            readable, highly performant code matters to me.
+          </p>
+          <p class="about-text">
+            I began my journey as a web developer in 2015, and since then, I've
+            continued to grow and evolve as a developer, taking on new
+            challenges and learning the latest technologies along the way. Now,
+            in my early thirties, 7 years after starting my web development
+            journey, I'm building cutting-edge web applications using modern
+            technologies such as Next.js, TypeScript, Nestjs, Tailwindcss,
+            Supabase and much more.
+          </p>
+          <p class="about-text">
+            When I'm not in full-on developer mode, you can find me hovering
+            around on twitter or on indie hacker, witnessing the journey of
+            early startups or enjoying some free time. You can follow me on
+            Twitter where I share tech-related bites and build in public, or you
+            can follow me on GitHub.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <div class="section-title">
+          <span class="display-regular">My</span>
+          <span class="display-bold">Projects</span>
+        </div>
+
+        <div class="project-item">
+          <div class="project-image">
+            <img src="public/project1.png" alt="Crypto Screener Application" />
+          </div>
+          <div class="project-content">
+            <div class="project-number">01</div>
+            <h3 class="project-title">Crypto Screener Application</h3>
+            <p class="project-description">
+              I'm Evren Shah Lorem Ipsum is simply dummy text of the printing
+              and typesetting industry. Lorem Ipsum has been the industry's
+              standard dummy text ever since the 1500s, when an unknown printer
+              took a galley of type and scrambled it to specimen book.
+            </p>
+            <a href="#" class="read-more-btn">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-content">
+            <div class="project-number">02</div>
+            <h3 class="project-title">
+              Euphoria - Ecommerce (Apparels) Website Template
+            </h3>
+            <p class="project-description">
+              I'm Evren Shah Lorem Ipsum is simply dummy text of the printing
+              and typesetting industry. Lorem Ipsum has been the industry's
+              standard dummy text ever since the 1500s, when an unknown printer
+              took a galley of type and scrambled it to specimen book.
+              <br /><br />
+              when an unknown printer took a galley of type and scrambled it to
+              specimen book.
+            </p>
+            <a href="#" class="read-more-btn">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+          <div class="project-image">
+            <img src="public/project2.png" alt="Euphoria Ecommerce Website" />
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-image">
+            <img src="public/project3-7f7814.png" alt="Blog Website Template" />
+          </div>
+          <div class="project-content">
+            <div class="project-number">03</div>
+            <h3 class="project-title">Blog Website Template</h3>
+            <p class="project-description">
+              I'm Evren Shah Lorem Ipsum is simply dummy text of the printing
+              and typesetting industry. Lorem Ipsum has been the industry's
+              standard dummy text ever since the 1500s, when an unknown printer
+              took a galley of type and scrambled it to specimen book.
+            </p>
+            <a href="#" class="read-more-btn">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <a href="#" class="footer-logo">
+          <div class="logo-icon">
+            <i class="fas fa-user"></i>
+          </div>
+          Personal
+        </a>
+        <div class="footer-text">
+          <div class="footer-copyright">@ 2019-2023 Personal</div>
+          <div class="footer-credit">Made In Figma</div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Form submission
+      document
+        .querySelector(".submit-btn")
+        ?.addEventListener("click", function (e) {
+          e.preventDefault();
+          alert("Thank you for your message! I will get back to you soon.");
+        });
+
+      // Add scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      // Observe all sections for animations
+      document.querySelectorAll("section").forEach((section) => {
+        section.style.opacity = "0";
+        section.style.transform = "translateY(20px)";
+        section.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+        observer.observe(section);
+      });
+
+      // Hero section should be visible immediately
+      document.querySelector(".hero").style.opacity = "1";
+      document.querySelector(".hero").style.transform = "translateY(0)";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+"use client";
+
+import React from "react";
+
+const SkillsSection = () => {
+  const skills = [
+    { icon: "fab fa-python", name: "Python", active: true },
+    { icon: "fas fa-fire", name: "PyTorch", active: false },
+    { icon: "fab fa-react", name: "React", active: false },
+    { icon: "fas fa-brain", name: "Deep Learning", active: false },
+    { icon: "fas fa-eye", name: "Computer Vision", active: false },
+    { icon: "fab fa-git-alt", name: "Git", active: false },
+    { icon: "fab fa-aws", name: "AWS", active: false },
+    { icon: "fab fa-docker", name: "Docker", active: false },
+    { icon: "fab fa-js-square", name: "JavaScript", active: false },
+    { icon: "fab fa-node-js", name: "Node.js", active: false },
+  ];
+
+  return (
+    <section id="skills" className="bg-white min-h-screen scroll-mt-24">
+      <div className="max-w-[1440px] mx-auto px-20 py-15 flex flex-col justify-center items-center h-full min-h-screen">
+        <div className="flex flex-col gap-5 px-8 max-w-[1280px]">
+          <div className="flex justify-center items-center self-stretch gap-4 py-5 mb-0">
+            <span className="text-5xl font-normal leading-[1.167] tracking-tight">
+              My
+            </span>
+            <span className="text-5xl font-extrabold leading-[1.167] tracking-tight">
+              Skills
+            </span>
+          </div>
+          <div className="flex flex-col items-center self-stretch py-5">
+            <div className="flex justify-between items-center self-stretch py-5">
+              {skills.slice(0, 5).map((skill, index) => (
+                <div
+                  key={index}
+                  className={`flex flex-col items-center justify-center gap-8 p-6 border-2 border-black rounded w-[186px] h-[186px] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+                    skill.active ? "bg-black text-white" : "bg-white"
+                  }`}
+                >
+                  <div className="w-14 h-14 flex items-center justify-center text-3xl">
+                    <i className={skill.icon}></i>
+                  </div>
+                  <div className="text-xl font-bold text-center leading-tight tracking-tight">
+                    {skill.name}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="flex justify-between items-center self-stretch py-5">
+              {skills.slice(5, 10).map((skill, index) => (
+                <div
+                  key={index + 5}
+                  className={`flex flex-col items-center justify-center gap-8 p-6 border-2 border-black rounded w-[186px] h-[186px] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+                    skill.active ? "bg-black text-white" : "bg-white"
+                  }`}
+                >
+                  <div className="w-14 h-14 flex items-center justify-center text-3xl">
+                    <i className={skill.icon}></i>
+                  </div>
+                  <div className="text-xl font-bold text-center leading-tight tracking-tight">
+                    {skill.name}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default SkillsSection;
