@@ -31,19 +31,23 @@ const HeroSection = () => {
               Webアプリケーション開発にも取り組んでおり、React、Next.js、FastAPIなどの技術を使用しています。
             </p>
 
-            {/* Social Buttons - Mobile position */}
-            <div className="flex md:hidden gap-6 py-1 justify-center">
+            {/* Social Buttons - Follow text alignment (center on mobile, left on md+) */}
+            <div className="flex gap-6 py-1 justify-center md:justify-start">
               <a
                 href="https://github.com/ks415"
-                className="w-12 h-12 rounded border-0 flex items-center justify-center text-white no-underline text-lg transition-transform hover:-translate-y-1 p-3 bg-black"
+                className="w-12 h-12 md:w-14 md:h-14 rounded border-0 flex items-center justify-center text-white no-underline text-lg transition-transform hover:-translate-y-1 p-3 md:p-4 bg-black"
               >
                 <i className="fab fa-github"></i>
               </a>
               <a
                 href="https://qiita.com/ks415"
-                className="w-12 h-12 rounded border-0 flex items-center justify-center text-black no-underline text-lg transition-transform hover:-translate-y-1 p-3 bg-white border-2 border-black"
+                className="w-12 h-12 md:w-14 md:h-14 rounded border-0 flex items-center justify-center text-black no-underline text-lg transition-transform hover:-translate-y-1 p-3 md:p-4 bg-white border-2 border-black"
               >
-                <img src="/qiita-icon.png" alt="Qiita" className="w-4 h-4" />
+                <img
+                  src="/qiita-icon.png"
+                  alt="Qiita"
+                  className="w-4 h-4 md:w-5 md:h-5"
+                />
               </a>
             </div>
           </div>
@@ -60,21 +64,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Social Buttons - Desktop position */}
-        <div className="hidden md:flex absolute top-[560px] left-[116px] gap-8 py-1">
-          <a
-            href="https://github.com/ks415"
-            className="w-14 h-14 rounded border-0 flex items-center justify-center text-white no-underline text-xl transition-transform hover:-translate-y-1 p-4 bg-black"
-          >
-            <i className="fab fa-github"></i>
-          </a>
-          <a
-            href="https://qiita.com/ks415"
-            className="w-14 h-14 rounded border-0 flex items-center justify-center text-black no-underline text-xl transition-transform hover:-translate-y-1 p-4 bg-white border-2 border-black"
-          >
-            <img src="/qiita-icon.png" alt="Qiita" className="w-5 h-5" />
-          </a>
-        </div>
+        {/* Social Buttons moved inside text area above for consistent alignment */}
       </div>
     </section>
   );
