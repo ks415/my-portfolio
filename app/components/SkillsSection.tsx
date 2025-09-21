@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 const SkillsSection = () => {
   const skills = [
@@ -105,6 +106,39 @@ const SkillsSection = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Certifications */}
+          <div className="flex flex-col gap-4 pt-2">
+            <div className="flex items-baseline gap-2">
+              <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight">
+                Certifications
+              </h3>
+            </div>
+
+            <div className="w-full">
+              <div className="flex flex-col sm:flex-row items-center sm:items-stretch gap-4 p-4 sm:p-5 border-2 border-black rounded transition-all duration-300 hover:-translate-y-1 hover:shadow-xl bg-white">
+                <div className="relative w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 shrink-0">
+                  <Image
+                    src="/e-shikaku-2025-2.png"
+                    alt="JDLA E資格 2025 #2 ロゴ"
+                    fill
+                    sizes="(min-width:768px) 160px, (min-width:640px) 128px, 112px"
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+                <div className="flex-1 flex flex-col justify-center">
+                  <p className="text-lg md:text-xl font-bold leading-tight">
+                    JDLA Deep Learning for ENGINEER（E資格）
+                  </p>
+                  <p className="text-sm md:text-base text-gray-700 leading-snug">
+                    発行元: 一般社団法人 日本ディープラーニング協会（JDLA） /
+                    2025-09
+                  </p>
+                </div>
               </div>
             </div>
           </div>
