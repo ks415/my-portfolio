@@ -40,6 +40,12 @@ const HeroSection = () => {
                 <i className="fab fa-github"></i>
               </a>
               <a
+                href="https://www.linkedin.com/in/ks415"
+                className="w-12 h-12 md:w-14 md:h-14 rounded border-0 flex items-center justify-center text-white no-underline text-lg transition-transform hover:-translate-y-1 p-3 md:p-4 bg-[#0077B5]"
+              >
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+              <a
                 href="https://qiita.com/ks415"
                 className="w-12 h-12 md:w-14 md:h-14 rounded border-0 flex items-center justify-center text-black no-underline text-lg transition-transform hover:-translate-y-1 p-3 md:p-4 bg-white border-2 border-black"
               >
