@@ -7,12 +7,12 @@ const ExperienceSection = () => {
   const experiences = [
     {
       company: "Athena Technologies",
-      role: "AI Engineer",
+      role: "ML Engineer",
       period: "Feb 2025 - Present",
       logo: "AthenaTechnologies.png",
       logoColor: "#ffffffff",
       description:
-        "AI Engineerとして、機械学習とディープラーニング技術を活用したソリューションの開発に従事しています。",
+        "ML Engineerとして、機械学習とディープラーニング技術を活用したソリューションの開発に従事しています。",
       active: true,
       isSchool: false,
       hasCustomLogo: true,

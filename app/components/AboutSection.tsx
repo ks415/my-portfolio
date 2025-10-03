@@ -46,7 +46,7 @@ const AboutSection = () => {
               </p>
               <p className="text-sm md:text-base leading-6 text-[#71717A] tracking-wider">
                 研究以外の時間は、新しい技術の学習やWebアプリケーションの開発などを行っています。2025年2月からはAthena
-                TechnologiesでAIエンジニアとしてAIの社会実装に携わっています。
+                TechnologiesでMLエンジニアとしてAIの社会実装に携わっています。
               </p>
             </div>
           </div>
