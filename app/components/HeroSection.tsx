@@ -18,7 +18,7 @@ const HeroSection = () => {
               </div>
               <div className="flex flex-wrap gap-2 md:gap-4 items-center justify-center md:justify-start">
                 <span className="text-3xl md:text-5xl leading-[1.167] tracking-tight font-extrabold">
-                  So Kawagoe.
+                  川越壮 - So Kawagoe.
                 </span>
               </div>
             </div>

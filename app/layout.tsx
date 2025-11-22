@@ -9,16 +9,43 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "川越壮 | ポートフォリオ",
-    template: "%s | 川越壮",
-  },
+  title: "川越壮 | So Kawagoe",
   description:
     "川越壮（So Kawagoe）のポートフォリオ。コンピュータビジョン研究・Vision-Language・Web開発（Next.js/TypeScript）などの実績とプロジェクトを掲載。",
-  robots: {
-    index: true,
-    follow: true,
+  openGraph: {
+    title: '川越壮 - So Kawagoe',
+    description:
+      '川越壮 |大阪公立大学大学院 知能メディア処理研究室所属 | MLエンジニア / コンピュータビジョン研究者 | Vision-Language Model | Web開発（Next.js/TypeScript）',
+    url: 'https://main.dkgdihhe96jts.amplifyapp.com/',
+    siteName: 'So Kawagoe Portfolio',
+    locale: 'ja_JP',
+    type: 'website',
+    emails: ['kawauso415@gmail.com'],
+    images: [
+      {
+        url: 'public/icon_user.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
+  keywords: [
+    '川越壮',
+    '川越壮',
+    'かわごえそう',
+    'So Kawagoe',
+    'Kawagoe So',
+    '大阪公立大学大学院',
+    '大阪公立大学',
+    '知能メディア処理研究室',
+    '知能メディア処理研究グループ',
+    '画像認識',
+    '機械学習',
+    '深層学習',
+    'Vision-Language Model',
+    'VLM',
+    'コンピュータビジョン',
+  ],
 };
 
 export default function RootLayout({
