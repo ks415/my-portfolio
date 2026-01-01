@@ -45,8 +45,7 @@ const AboutSection = () => {
                 モダンな技術スタックを使用してフルスタックでの開発を行っています。
               </p>
               <p className="text-sm md:text-base leading-6 text-[#71717A] tracking-wider">
-                研究以外の時間は、新しい技術の学習やWebアプリケーションの開発などを行っています。2025年2月からはAthena
-                TechnologiesでMLエンジニアとしてAIの社会実装に携わっています。
+                研究以外の時間は、新しい技術の学習やWebアプリケーションの開発などを行っています。2026年1月から株式会社松尾研究所でMLエンジニアとしてAIの社会実装に携わっています。
               </p>
             </div>
           </div>

@@ -6,14 +6,26 @@ import Image from "next/image";
 const ExperienceSection = () => {
   const experiences = [
     {
-      company: "Athena Technologies",
+      company: "株式会社松尾研究所",
       role: "ML Engineer",
-      period: "Feb 2025 - Present",
+      period: "Jan 2026 - Present",
+      logo: "MatsuoInstitute.png",
+      logoColor: "#ffffffff",
+      description:
+        "金融業界におけるLLMとRAGを活用したソリューションの開発に従事しています。",
+      active: true,
+      isSchool: false,
+      hasCustomLogo: true,
+    },
+    {
+      company: "株式会社 Athena Technologies",
+      role: "ML Engineer",
+      period: "Feb 2025 - Dec 2025",
       logo: "AthenaTechnologies.png",
       logoColor: "#ffffffff",
       description:
-        "ML Engineerとして、機械学習とディープラーニング技術を活用したソリューションの開発に従事しています。",
-      active: true,
+        "医療機関向けAIエージェントのPoC開発やエッジデバイス向け物体検出モデルのPoC開発に従事しました。",
+      active: false,
       isSchool: false,
       hasCustomLogo: true,
     },
